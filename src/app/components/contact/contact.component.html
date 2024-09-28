@@ -1,0 +1,45 @@
+<section class="contact-section py-5 d-flex align-items-center justify-content-center">
+  <h2 class="text-center large-heading gradient-text">I would love to hear from you!</h2>
+  <div class="container d-flex flex-column align-items-center justify-content-center">
+    <div class="form-container">
+      <form #contactForm="ngForm" class="contact-form" (ngSubmit)="onSubmit(contactForm)" novalidate>
+        <!-- Name Field -->
+        <div class="form-group mb-3">
+          <label for="name" class="form-label gradient-text-large label-custom">Name</label>
+          <input type="text" id="name" class="form-control gradient-input" required ngModel name="name" #name="ngModel">
+          <div *ngIf="name.invalid && name.touched" class="text-danger">Name is required.</div>
+        </div>
+
+        <!-- Email Field -->
+        <div class="form-group mb-3">
+          <label for="email" class="form-label gradient-text-large label-custom">Email</label>
+          <input type="email" id="email" class="form-control gradient-input" required ngModel name="email" #email="ngModel">
+          <div *ngIf="name.invalid && email.invalid && email.touched" class="text-danger">A valid email is required.</div>
+        </div>
+
+        <!-- Message Field -->
+        <div class="form-group mb-3">
+          <label for="message" class="form-label gradient-text-large label-custom">Message</label>
+          <textarea id="message" class="form-control gradient-input" required ngModel name="message" #message="ngModel"></textarea>
+          <div *ngIf="name.invalid && email.invalid && message.invalid && message.touched" class="text-danger">Message is required.</div>
+        </div>
+
+        <!-- Submit Button (Disabled if form is invalid) -->
+        <button type="submit" class="btn btn-primary btn-lg" [disabled]="contactForm.invalid">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Contact Information Section -->
+    <div class="info-container mt-5">
+      <h3 class="text-white gradient-text-large large-heading">Get in Touch</h3>
+      <div class="d-flex flex-row justify-content-around w-100">
+        <p class="text-white">Email: <a href="mailto:amoghgupta2000@gmail.com" class="text-white">amoghgupta2000&#64;gmail.com</a></p>
+        <p class="text-white">LinkedIn: <a href="https://www.linkedin.com/in/amogh-gupta-981307224/" class="text-white" target="_blank">LinkedIn Profile</a></p>
+        <p class="text-white">GitHub: <a href="https://github.com/amoghhhh" class="text-white" target="_blank">GitHub Profile</a></p>
+        <p class="text-white">Leetcode: <a href="https://leetcode.com/u/amogh_gupta/" class="text-white" target="_blank">Leetcode Profile</a></p>
+        <p class="text-white">Hackerrank: <a href="https://www.hackerrank.com/profile/2020B0101121" class="text-white" target="_blank">Hackerrank Profile</a></p>
+        <p class="text-white">Phone: +91-9125565711</p>
+      </div>
+    </div>
+  </div>
+</section>

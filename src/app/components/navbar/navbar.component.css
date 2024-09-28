@@ -1,0 +1,62 @@
+.navbar-container {
+    display: flex;
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Space between logo and links */
+    /* padding: 0px 0px; Padding for spacing */
+    margin-right: 10px;
+    background-color: #000000; /* Light background color */
+}
+
+/* Logo text styling */
+.logo-text {
+    font-size: 2rem; /* Font size for the logo */
+    color: #fcf8f9; /* Vibrant color for the logo text */
+    margin: 0; /* Remove default margin */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar link styling */
+.nav-link {
+    font-size: 1rem; /* Font size for links */
+    color: #fcf9f9; /* Dark color for contrast */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.2s; /* Smooth color transition */
+    margin-left: 20px; /* Space between links */
+}
+
+.nav-link:hover {
+    color: #faf6f7; /* Vibrant color on hover */
+    /* font-weight: bold; */
+}
+
+.btn {
+    background-color: #e96113; 
+    color: white;
+    padding: 8px 12px;
+    margin-left: 24px;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #45a049;
+    font-weight: bold;
+}
+
+/* Logo container styling */
+.logo-container {
+    display: flex;
+    align-items: center; /* Align logo image and text */
+}
+
+/* Logo image styling */
+.circular-image {
+    width: 80px; /* Set width for smaller image size */
+    height: 80px; /* Set height to match width */
+    border-radius: 50%; /* Make the image circular */
+    margin-right: 10px; /* Space between the image and text */
+    object-fit: cover; /* Ensure the image is fully contained within the circle */
+}

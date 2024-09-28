@@ -1,0 +1,29 @@
+<div class="timeline">
+  <div class="gantt-chart">
+    <!-- <h1 class="gantt-heading">Experience</h1> -->
+    <div class="gantt-container">
+      <div class="gantt-line"></div>
+      <div class="years">
+        <div class="year" *ngFor="let data of ganttData" 
+             (mouseover)="hoveredData = data" 
+             (mouseleave)="hoveredData = null">
+          {{ data.year }}
+        </div>
+      </div>
+      <div class="tooltip" *ngIf="hoveredData">
+        <strong>{{ hoveredData.company }}</strong><br>
+        Position: {{ hoveredData.position }}
+      </div>
+    </div>
+  </div>
+  <div class="container" *ngFor="let project of projects">
+    <a [href]="project.githubLink" target="_blank" class="content">
+      <h2>{{ project.date }}</h2>
+      <h3>{{ project.title }}</h3>
+      <p>{{ project.description }}</p>
+      <ul class="technologies">
+        <li *ngFor="let tech of project.technologies">{{ tech }}</li>
+      </ul>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,109 @@
+.contact-section {
+  padding: 50px 0;
+  color: rgb(255, 149, 0);
+}
+
+.form-container {
+  background: rgba(2, 2, 2, 0.8);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form {
+  max-width: 400px;
+  width: 100%;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 30px; /* Equal space between fields */
+}
+
+.form-label {
+  margin-bottom: 10px; /* Space between label and input text */
+}
+
+.gradient-input {
+  background: linear-gradient(45deg, #474746, #a6a7a6);
+  color: rgb(253, 253, 253);
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px; /* Add padding */
+  margin-bottom: 10px; /* Space below the input */
+  display: block; /* Ensure block display for margin */
+  width: 100%; /* Full width for the input */
+}
+
+.gradient-input:focus {
+  outline: none; /* Remove outline on focus */
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Optional shadow effect */
+}
+
+.btn-lg {
+  padding: 10px 20px;
+  font-size: 1.25rem;
+  border-radius: 10px; 
+  background-color: #3803e6; 
+  color: white; 
+  border: none; 
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+  margin-top: 15px; 
+  display: block; 
+  width: 100%; 
+  cursor: pointer;
+}
+
+.btn-lg:hover {
+  background-color: #09fd01; 
+  transform: scale(1.05); 
+  color: black;
+  text-decoration: bold;
+}
+
+.info-container {
+  margin-top: 50px;
+  text-align: center;
+  color: rgba(79, 79, 81, 0.947);;
+  height: 5vh;
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+.info-container div {
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: space-around; 
+  margin-top: 0px; 
+  flex-wrap: wrap;
+}
+
+.info-container p {
+  margin: 0 15px; /* Space between items */
+}
+
+.label-custom {
+  color: #ff6a00; /* Change this to your desired color */
+}
+
+.contact-section {
+  padding: 0px 0;
+  color: rgb(2, 133, 247);
+  height: 85vh; /* Full height of the viewport */
+  display: flex; /* Use flexbox for centering */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  /* font-size: 1rem; */
+}
+
+.container {
+  width: 100%; /* Ensure container takes full width */
+}
+
+.large-heading {
+  font-size: 2.5rem; /* Adjust the size as needed */
+}
