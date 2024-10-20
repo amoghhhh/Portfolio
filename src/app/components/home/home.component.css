@@ -135,3 +135,11 @@ body, html {
 a{
   text-decoration: none;
 }
+
+.cert-logo {
+  width: 25px;
+  height: 25px;
+  margin-right: 8px;
+  /* margin-top: 20px; */
+  vertical-align: middle;
+}
