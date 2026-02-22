@@ -8,13 +8,11 @@ import { Component,OnInit } from '@angular/core';
   styleUrl: './about.component.css'
 })
 export class AboutComponent implements OnInit {
-  introductionText: string = `This is Amogh Gupta, currently working as a DevOps Engineer, where I have developed a strong foundation in cloud
-  technologies, automation, and continuous integration and continuous deployment (CI/CD) practices. My role involves working extensively with AWS,
-  Kubernetes, and the ELK stack, focusing on the deployment and management of scalable and resilient applications.
-  In addition to my technical skills, I have a solid background in software development, particularly with Java and Spring Boot, 
-  which enables me to effectively collaborate with development teams to optimize workflows and enhance system performance.
-  I am particularly passionate about leveraging best practices in DevOps to streamline processes and deliver high-quality software solutions. 
-  I appreciate the opportunity to discuss how my skills and experiences align with the goals of your team.`;
+  introductionText: string = `I'm Amogh Gupta, a DevOps Engineer with 2 years of professional experience in cloud infrastructure, automation, and CI/CD pipelines. 
+  I specialize in AWS services, Terraform, Kubernetes, Docker, and Linux system administration. My experience includes building 
+  and deploying scalable applications from scratch, implementing robust CI/CD pipelines, and developing comprehensive monitoring 
+  systems using Prometheus, Grafana, Jaeger, OpenTelemetry, and Fluentbit. I also have strong development skills in Java and 
+  Spring Boot, enabling me to bridge the gap between development and operations effectively.`;
   
   displayedText: string = '';
   index: number = 0;

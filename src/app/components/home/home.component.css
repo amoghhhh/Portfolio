@@ -2,144 +2,189 @@
 
 .hero {
   display: flex;
-  justify-content: center; /* Center align content */
-  align-items: center; /* Vertically center content */
-  height: 80vh; /* Adjust height as needed */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  position: relative;
+  overflow: visible;
+  padding: 80px 20px;
 }
 
-/* Image styling */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  position: relative;
+  z-index: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 .image-container {
-  flex-shrink: 0; /* Prevent image from shrinking */
-  margin: 0 50px; /* Add horizontal margin for spacing */
+  flex-shrink: 0;
+  position: relative;
 }
 
 .circular-image {
-  width: 340px; /* Set the width to make the image large */
-  height: 400px; /* Set height to match width for circular shape */
-  border-radius: 50%; /* Circular frame */
-  object-fit: cover; /* Maintain aspect ratio */
-  border: 5px solid #f85725; /* Optional: add a border for aesthetics */
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 5px solid #333;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
 }
 
-/* Text styling */
+.circular-image:hover {
+  transform: scale(1.05);
+}
+
 .text-left, .text-right {
-  flex: 1; /* Allow text containers to grow */
-  text-align: center; /* Center align text */
-  color: #fff; /* White text color for visibility */
+  flex: 1;
+  color: #fff;
 }
 
-.text-left h2, .text-right h2 {
-  margin-bottom: 0px; /* Space between heading and paragraph */
+.text-left {
+  text-align: right;
 }
 
-/* Ensure texts and image are in one line */
-.container {
-  display: flex; /* Make sure the container uses flexbox */
-  align-items: center; /* Center items vertically */
-  justify-content: center; /* Center items horizontally */
+.text-left p {
+  text-align: right;
 }
 
-/* Make the "Software Engineer" text larger */
-.software-engineer-title {
-  font-size: 3rem; /* Increase font size */
-  color: #fff; /* Maintain color */
+.location-text {
+  text-align: right;
+  font-size: 1.2rem;
+  color: #f0f0f0;
+  margin-bottom: 15px;
 }
 
-.amogh-title {
-  font-size: 3rem; /* Same size as "Software Engineer" */
-  color: #fff; /* Maintain color */
-  margin-bottom: 0px;
+.text-right {
+  text-align: left;
 }
 
-/* Custom list styling */
+.amogh-title, .software-engineer-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-left p, .text-right p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
 .custom-list {
-  list-style-type: none; /* Remove default list styling */
-  padding: 0; /* Remove default padding */
+  list-style-type: none;
+  padding: 0;
+  margin-top: 15px;
+  text-align: right;
 }
 
 .custom-list li {
-  position: relative; /* Position for custom bullets */
-  padding-left: 3px; /* Space for bullet, reduced for closer alignment */
-  margin-bottom: 0px; /* Space between items */
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  color: #333;
 }
 
 .custom-list li::before {
-  content: ''; /* Create a custom bullet */
-  position: absolute; /* Position it relative to the list item */
-  left: 115px; /* Align it to the left */
-  top: 5px; /* Align it to the middle of the text */
-  width: 10px; /* Width of the bullet */
-  height: 10px; /* Height of the bullet */
-  background-color: rgb(4, 248, 4); /* Color of the bullet */
-  border-radius: 50%; /* Make it circular */
-  animation: blink 0.8s infinite; /* Faster blinking effect */
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #00ff00;
+  border-radius: 50%;
+  animation: blink 1.5s infinite;
 }
 
-/* Blinking animation */
 @keyframes blink {
-  0%, 100% {
-    opacity: 1; /* Fully visible */
-  }
-  50% {
-    opacity: 0; /* Invisible */
-  }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
 }
 
-.text-end {
-  text-align: right; /* Right align text */
+.cert-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  background: rgba(102, 126, 234, 0.1);
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(102, 126, 234, 0.3);
 }
 
-.text-start {
-  text-align: left; /* Left align text */
+.cert-logo {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+
+.cert-badge span {
+  font-size: 0.95rem;
+  color: #333;
 }
 
 .explore-container {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: 0vh; /* Full viewport height */
-  background-color: #070707; /* Optional: dark background for the page */
+  justify-content: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
 .explore-box {
-  border: 4px solid rgb(255, 94, 0); /* Orange border */
-  padding: 10px; /* Padding inside the box */
-  text-align: center; /* Center the text */
-  text-decoration: none;
-  font-size: 1rem; /* Adjust the text size */
-  color: white; /* White text */
-  border-radius: 10px; /* Rounded corners */
-  background-color: black; /* Black background */
-  display: inline-block; /* Keep it inline without full width */
-  cursor: pointer; /* Pointer on hover */
-  transition: background-color 0.3s ease; /* Smooth hover transition */
-  margin: 0 auto; /* Ensure it's centered horizontally */
-  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.463); /* Optional shadow for effect */
-}
-
-/* Centering the box on the page */
-body, html {
-  height: 100%;
-  text-decoration: none;
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  background-color: #222; /* Dark background for the entire page */
+  border: 3px solid #667eea;
+  padding: 18px 45px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #667eea;
+  border-radius: 50px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
 }
 
 .explore-box:hover {
-  background-color: #1e1e1c; /* Slightly lighter background on hover */
-  font-weight: bold;
+  background: #667eea;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
 }
 
-a{
+.explore-box p {
+  margin: 0;
+}
+
+a {
   text-decoration: none;
 }
 
-.cert-logo {
-  width: 25px;
-  height: 25px;
-  margin-right: 8px;
-  /* margin-top: 20px; */
-  vertical-align: middle;
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .text-left, .text-right {
+    text-align: center !important;
+  }
+  
+  .amogh-title, .software-engineer-title {
+    font-size: 2.2rem;
+  }
+  
+  .circular-image {
+    width: 250px;
+    height: 250px;
+  }
 }
